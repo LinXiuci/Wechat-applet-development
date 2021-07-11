@@ -1,0 +1,21 @@
+{
+  "usingComponents": {
+    "searchInput":"../../components/searchInput/searchInput",
+    "news":"../../components/news/news",
+    "hongbao":"../../components/hongbao/hongbao",
+    "navBar":"/components/navBar/navBar"
+  },
+
+
+
+  "backgroundTextStyle":"dark",
+  "navigationBarBackgroundColor": "#ff3f2a",
+  "navigationBarTitleText": "苏宁易购",
+  "navigationBarTextStyle":"black",
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance": 50,
+  "backgroundColor":"#ff3f2a"
+  
+
+  
+}

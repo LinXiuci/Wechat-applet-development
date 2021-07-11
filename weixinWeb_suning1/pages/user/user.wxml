@@ -1,0 +1,140 @@
+<view class="user-BackgroundColor-1">
+<!-- 设置 -->
+    <view class="user-config">
+        <navigator >
+            <image src="/icon/config.png" />
+        </navigator>
+    </view>
+
+    <!-- 消息 -->
+    <view class="user-xiaoxi">
+        <navigator >
+            <image src="/icon/news.png" />
+        </navigator>
+    </view>
+</view>
+
+<view class="user-BackgroundColor-2">
+    <!-- 会员码 -->
+    <view class="user-huiyuanma">
+        <navigator >
+            <view >
+                <image src="/icon/huiyuanma.png" />
+            </view>
+            <text >会员码</text>
+        </navigator>
+    </view>
+
+    <!-- 当已经授权的时候 -->
+    <view wx:if="{{result == 'ok'}}" class="result">
+        <view class="headimg">
+            <image src="{{avatarUrl}}"></image>
+        </view>
+        <view class="nickname">{{nickName}}</view>
+    </view>
+    <!-- 当未授权的时候 -->
+    <view wx:else class="result">
+        <text>未授权</text>
+        <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    </view>
+</view>
+
+<!-- 会员的区域 -->
+<view class="user-BackgroundColor-3">
+    <!-- Super会员 -->
+    <view class="Super-member">
+        <navigator >
+            <view >
+                <image src="{{Super.imageSrc[0]}}" />
+                <text class="Super-text1">{{Super.imageId[0]}}</text>
+            </view>
+            <text class="Super-text2">{{Super.text[0]}}</text>
+        </navigator>
+    </view>
+
+    <view class="Super-hr"></view>
+
+    <!-- 加入Super -->
+    <view class="Super-jiaru">
+        <navigator >
+            <view >
+                <image src="{{Super.imageSrc[1]}}" />
+                <text class="Super-text1">{{Super.imageId[1]}}</text>
+            </view>
+            <text class="Super-text2">{{Super.text[1]}}</text>
+        </navigator>
+    </view>
+
+    <view class="Super-hr"></view>
+
+    <!-- 银行联名卡 -->
+    <view class="Super-lianmingka">
+        <navigator >
+            <view >
+                <image src="{{Super.imageSrc[2]}}" />
+                <text class="Super-text1">{{Super.imageId[2]}}</text>
+            </view>
+            <text class="Super-text2">{{Super.text[2]}}</text>
+        </navigator>
+    </view>
+
+</view>
+
+<!-- 我的订单区域   MyOrder -->
+<view class="user-BackgroundColor-4">
+    <view class="area">
+        <text >我的订单</text>
+        <view class="Find-all">
+            <navigator >
+                <text >查看全部</text>
+                <image src="/icon/Look.png"/>
+            </navigator>
+        </view>
+    </view>
+
+    <view class="MyOrder-Menu" wx:for="{{MyOrder.imageSrc}}" wx:key="id">
+        <navigator url="">
+            <image src="{{item}}" />
+            <view class="text-center">
+               {{MyOrder.imageId[index]}}
+            </view>
+        </navigator>
+    </view>
+</view>
+
+<!-- 必备工具区域 EssentialTools  -->
+<view class="user-BackgroundColor-5">
+    <view class="area">
+        <text >必备工具</text>
+    </view>
+    <view class="ContentPadding">
+        <view class="EssentialTools-Menu" wx:for="{{EssentialTools.imageSrc}}" wx:key="id">
+            <navigator url="">
+                <image src="{{item}}" />
+                <view class="text-center">
+                {{EssentialTools.imageId[index]}}
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+
+
+<view class="YouMayAlsoLike">
+    <view class="YouMayAlsoLike-title">
+        <image src="https://image1.suning.cn/uimg/cms/img/157793128909842388.png?format=_is_1242w_100h.webp" />
+    </view>
+</view>
+
+
+<view class="container">
+  <view class="box" wx:for='{{show}}' wx:key='key'>
+    <navigator >
+        <image class="image" mode="widthFix" src="{{item.image}}"></image>
+        <view class="info">
+            <view>{{item.name}}</view>
+            <text >{{item.price}}</text>
+        </view>
+    </navigator>
+  </view>
+</view>

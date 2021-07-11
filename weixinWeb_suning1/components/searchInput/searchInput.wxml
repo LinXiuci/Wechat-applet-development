@@ -1,0 +1,17 @@
+<!-- 这是一个搜索插件-->
+<view class="search">
+    
+    <view class="Scan-code">
+        <image src="/icon/scan-code.png" />
+    </view>
+
+    <view class="search-hr"></view>
+    <navigator url="/pages/search/search">
+        <view class="search-area">
+            <view class="search-Button">
+                <text class="search-text">搜索</text>
+            </view>
+        </view>
+    </navigator>
+
+</view>

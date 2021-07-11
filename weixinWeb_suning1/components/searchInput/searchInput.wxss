@@ -1,0 +1,49 @@
+/* components/searchInput/searchInput.wxss */
+
+/* 定义搜索插件外围的高和背景颜色 */
+.search{
+  width: 72%;
+  height: 65rpx;
+  background-color: #ffffff;
+ /*  border: 1px solid #2ECC71; */
+  border-radius: 20rpx;
+  margin-left: 15rpx;
+}
+
+.search image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin: 2% auto 2% 2%;
+}
+.search-hr{
+  float: left;
+  width: 2rpx;
+  height: 40rpx;
+  margin: 2% auto 2% 2%;
+  background-color: #a3a7a4;
+}
+
+.search-area{
+  margin-left: 12%;
+  width: 88%;
+  height: 65rpx;
+}
+
+  /* 定义搜索插件内部的宽、高、圆角度和背景颜色 */
+.search-Button{
+  position: absolute;
+  width: 15%;
+  height: 64.5rpx;
+  background-color:#2ECC71;
+  margin-left: 48.5%;
+  border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.search-Button .search-text{
+  color: #ffffff;
+  font-size: 28rpx;
+}

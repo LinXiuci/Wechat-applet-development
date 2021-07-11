@@ -1,0 +1,69 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/sort/sort",
+    "pages/specialOffer/specialOffer",
+    "pages/shopping/shopping",
+    "pages/user/user",
+    
+    "pages/search/search",
+    "pages/news/news",
+    "pages/hongbao/hongbao",
+
+    "components/navBar/navBar",
+    "components/searchInput/searchInput",
+    "components/news/news",
+    "components/hongbao/hongbao",
+    
+
+    "navigators/SuningSpike/SuningSpike/SuningSpike",
+    "navigators/SuningSupermarket/SuningSupermarket/SuningSupermarket"
+
+    
+  ],
+
+  "entryPagePath": "",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "color": "#273746",
+    "selectedColor": "#F5B041",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath":"pages/home/home",
+        "text": "首页",
+        "iconPath": "/icon/home.png",
+        "selectedIconPath": "/icon/home_1.png"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "分类",
+        "iconPath": "/icon/fenlei.png",
+        "selectedIconPath": "/icon/fenlei_1.png"
+      },
+      {
+        "pagePath": "pages/specialOffer/specialOffer",
+        "text": "特价包邮",
+        "iconPath": "/icon/tejia.png",
+        "selectedIconPath": "/icon/tejia_1.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "/icon/shopping.png",
+        "selectedIconPath": "/icon/shopping_1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/icon/user.png",
+        "selectedIconPath": "/icon/user_1.png"
+      }
+    ]
+  }
+  
+}

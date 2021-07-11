@@ -1,0 +1,312 @@
+/* pages/user/user.wxss */
+
+page{
+
+  background-color:#eff2f3;
+}
+.user-BackgroundColor-1{
+  width: 100%;
+  height: 50rpx;
+  background-color: #F4D03F;
+}
+/* 设置 */
+.user-config{
+  float: left;
+  margin-left: 620rpx;
+  width: 60rpx;
+  height: 50rpx;
+}
+.user-config image{
+  width: 50rpx;
+  height: 50rpx;
+}
+/* 消息 */
+.user-xiaoxi{
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+}
+.user-xiaoxi image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+/* 用户登录 */
+.user-BackgroundColor-2{
+  position:absolute;
+  width: 100%;
+  height: 220rpx;
+  background-color: #F4D03F;border-radius: 0 0 10% 10%;
+}
+button{
+  margin:40rpx auto;  
+}
+.user-BackgroundColor-2 .result{
+  width:70%;
+  height: 180rpx;
+  margin: auto;
+  text-align: center;
+ 
+}
+.result .headimg{
+  float: left;
+  width:150rpx;
+  height: 120rpx;
+  border-radius: 50px;
+  margin-bottom: 20rpx;
+}
+.nickname{
+  float: left;
+  width: 200rpx;
+  height: 55rpx;
+  font-size: 35rpx;
+  margin-top: 55rpx;
+  margin-left: 35rpx;
+ /*  border:red 1px solid; */
+}
+.result .headimg image{
+  width:150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin:auto;
+  border: aliceblue 5rpx solid;
+}
+
+
+/*  <!-- 会员码 --> */
+.user-huiyuanma{
+  position:absolute;
+  top: 60rpx;
+  margin-left: 630rpx;
+  
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 20rpx;
+  border-radius: 10rpx;
+  background-color: #f5dd7d;
+  border-radius: 0 0 50% 50%;
+}
+.user-huiyuanma view{
+  width: 50rpx;
+  height: 50rpx;
+  margin: auto;
+  position:relative;
+  top: 15rpx;
+}
+.user-huiyuanma text{
+  font-weight: 400;
+  align-items: baseline;
+  margin-left: 20rpx;
+  position:relative;
+  top: 15rpx;
+}
+.user-huiyuanma image{
+  margin: auto;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+/* Super */
+.user-BackgroundColor-3{
+  width: 95%;
+  height: 100rpx;
+  position: relative;
+  margin: 190rpx auto  10rpx auto;
+  background-color: #FDFEFE ;
+  border-radius: 10rpx;
+}
+.user-BackgroundColor-3 image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.Super-text1{
+  font-size: 25rpx;
+  color: #af9a4d;
+  margin-left: 10rpx;
+}
+.Super-text2{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color: #d1b64a;
+}
+.Super-hr{
+  width: 2rpx;
+  height: 50rpx;
+  float: left;
+  margin: 25rpx auto;
+  background-color: #F4D03F #F4D03F;
+}
+/* Super会员 */
+.Super-member{
+  float: left;
+  width: 230rpx;
+  height: 100rpx;
+ 
+}
+.Super-member view{
+  width: 180rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+/* 加入Super*/
+.Super-jiaru{
+  float: left;
+  width: 230rpx;
+  height: 100rpx;
+  margin-left: 7rpx;
+}
+.Super-jiaru view{
+  width: 180rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+/* 银行联名卡 */
+.Super-lianmingka{
+  float: left;
+  width: 230rpx;
+  height: 100rpx;
+  margin-left: 6rpx;
+}
+.Super-lianmingka view{
+  width: 180rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+
+
+/* 我的订单区域 */
+.user-BackgroundColor-4{
+  width: 95%;
+  height: 200rpx;
+  margin: 10rpx auto 10rpx auto;
+  background-color: #FDFEFE ;
+  border-radius: 10rpx;
+}
+.area{
+  padding: 10rpx;
+  width: 100%;
+  height: 60rpx;
+}
+.area text{
+  float: left;
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+.Find-all{
+  float: left;
+  position: relative;
+  left: 450rpx;
+  width: 20%;
+  height: 40rpx;
+  top: 5rpx;
+}
+.Find-all text{
+  /* 查看全部 */
+  font-size: 23rpx;
+  padding: 5rpx;
+}
+.Find-all image{
+  margin-left: 5rpx;
+  width: 25rpx;
+  height: 25rpx;
+}
+
+/* 我的订单菜单栏 */
+.MyOrder-Menu{
+  width: 141.78rpx;
+  height: 120rpx;
+  float: left; 
+  padding: 2rpx;
+}
+.MyOrder-Menu .text-center{
+  width: 130rpx;
+  height: 40rpx;
+  margin: auto;
+  font-size: 25rpx;  
+  text-align: center;
+  padding: 10rpx;
+}
+.MyOrder-Menu image{
+  width: 55rpx;
+  height: 55rpx;
+  display: block;
+  margin: auto;
+}
+
+/* 必备工具区域  */
+.user-BackgroundColor-5{
+  width: 95%;
+  height: 320rpx;
+  margin: 10rpx auto 10rpx auto;
+  background-color: #FDFEFE ;
+  border-radius: 10rpx;
+}
+/* 必备工具填充 */
+.ContentPadding{
+  width: 95%;
+  height: 240rpx;
+  margin: auto;
+}
+.EssentialTools-Menu{
+  width: 163.5rpx;
+  height: 120rpx;
+  float: left; 
+}
+.EssentialTools-Menu .text-center{
+  width: 130rpx;
+  height: 40rpx;
+  margin: auto;
+  font-size: 25rpx;  
+  text-align: center;
+  padding: 15rpx;
+}
+.EssentialTools-Menu image{
+  width: 55rpx;
+  height: 55rpx;
+  display: block;
+  margin: auto;
+}
+
+.YouMayAlsoLike{
+  width: 95%;
+  height: 55rpx;
+  margin: auto;
+}
+
+.YouMayAlsoLike-title image{
+  width: 95%;
+  height: 53rpx;
+}
+
+
+
+/* 流式布局 */
+.container {
+  width: 95%;
+  column-count: 2;
+  column-gap: 10rpx;
+  margin: auto; 
+}
+.box {
+  width: 350rpx;
+  font-size: 10px;
+  margin: auto 10rpx 10rpx auto;
+  background-color: #FFF;
+  border-radius: 20rpx;
+  display: inline-block;
+}
+.image {
+  width: 345rpx;
+  border-top-right-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+}
+.info {
+  padding: 15rpx;
+}
+.info text{
+    color: red;
+    font-size: 30rpx;
+}
+

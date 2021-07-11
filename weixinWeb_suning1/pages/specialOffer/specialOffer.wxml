@@ -1,0 +1,130 @@
+<!-- /* 十款拍照出彩的全面屏手机推荐 */-->
+<view class="Heap-recommendation" wx:for="{{Mobile_phone}}" >
+    <navigator >
+        <view class="Title-Picture-Background"> 
+            <image src="{{item.title_Picture_Background}}" />
+            <view class="Ten-products">{{item.ten_products}}</view>
+            <!-- 标题 -->
+            <text class="Title">{{item.title}}</text>
+        </view>
+        <view class="imageSrc-arce" wx:for="{{item.imageSrc}}" wx:for-item="items">
+            <image src="{{items.src}}" />
+            <view class="src-name">{{items.src_name}}</view>
+            <view class="src-Collar-Roll">{{items.collar_Roll}}</view>
+            <text class="src-price">{{items.price}}</text>
+        </view>
+    </navigator>
+</view>
+
+<!-- /*十大控温精准更锁鲜的风冷冰箱  */  -->
+<view class="Heap-recommendation" wx:for="{{Air_cooled_refrigerator}}" >
+    <navigator >
+        <view class="Title-Picture-Background"> 
+            <image src="{{item.title_Picture_Background}}" />
+            <view class="Ten-products">{{item.ten_products}}</view>
+            <!-- 标题 -->
+            <text class="Title">{{item.title}}</text>
+        </view>
+        <view class="imageSrc-arce" wx:for="{{item.imageSrc}}" wx:for-item="items">
+            <image src="{{items.src}}" />
+            <view class="src-name">{{items.src_name}}</view>
+            <view class="src-Collar-Roll">{{items.collar_Roll}}</view>
+            <text class="src-price">{{items.price}}</text>
+        </view>
+    </navigator>
+</view>
+
+
+<!-- 可远程操控的10款智控冰箱推荐   */  -->
+<view class="Heap-recommendation" wx:for="{{Intelligent_control_refrigerator}}" >
+    <navigator >
+        <view class="Title-Picture-Background"> 
+            <image src="{{item.title_Picture_Background}}" />
+            <view class="Ten-products">{{item.ten_products}}</view>
+            <!-- 标题 -->
+            <text class="Title">{{item.title}}</text>
+        </view>
+        <view class="imageSrc-arce" wx:for="{{item.imageSrc}}" wx:for-item="items">
+            <image src="{{items.src}}" />
+            <view class="src-name">{{items.src_name}}</view>
+            <view class="src-Collar-Roll">{{items.collar_Roll}}</view>
+            <text class="src-price">{{items.price}}</text>
+        </view>
+    </navigator>
+</view>
+
+
+<!-- 十款清扫不留痕的扫地机器人    */  -->
+<view class="Heap-recommendation" wx:for="{{Sweeping_robot}}" >
+    <navigator >
+        <view class="Title-Picture-Background"> 
+            <image src="{{item.title_Picture_Background}}" />
+            <view class="Ten-products">{{item.ten_products}}</view>
+            <!-- 标题 -->
+            <text class="Title">{{item.title}}</text>
+        </view>
+        <view class="imageSrc-arce" wx:for="{{item.imageSrc}}" wx:for-item="items">
+            <image src="{{items.src}}" />
+            <view class="src-name">{{items.src_name}}</view>
+            <view class="src-Collar-Roll">{{items.collar_Roll}}</view>
+            <text class="src-price">{{items.price}}</text>
+        </view>
+    </navigator>
+</view>
+
+
+<!-- 十款开黑不卡顿的游戏手机精选 -->
+<view class="Heap-recommendation" wx:for="{{Game_mobile_selection}}" >
+    <navigator >
+        <view class="Title-Picture-Background"> 
+            <image src="{{item.title_Picture_Background}}" />
+            <view class="Ten-products">{{item.ten_products}}</view>
+            <!-- 标题 -->
+            <text class="Title">{{item.title}}</text>
+        </view>
+        <view class="imageSrc-arce" wx:for="{{item.imageSrc}}" wx:for-item="items">
+            <image src="{{items.src}}" />
+            <view class="src-name">{{items.src_name}}</view>
+            <view class="src-Collar-Roll">{{items.collar_Roll}}</view>
+            <text class="src-price">{{items.price}}</text>
+        </view>
+    </navigator>
+</view>
+
+
+<!-- 十款激战不卡顿的游戏主机 -->
+<view class="Heap-recommendation" wx:for="{{Game_host}}" >
+    <navigator >
+        <view class="Title-Picture-Background"> 
+            <image src="{{item.title_Picture_Background}}" />
+            <view class="Ten-products">{{item.ten_products}}</view>
+            <!-- 标题 -->
+            <text class="Title">{{item.title}}</text>
+        </view>
+        <view class="imageSrc-arce" wx:for="{{item.imageSrc}}" wx:for-item="items">
+            <image src="{{items.src}}" />
+            <view class="src-name">{{items.src_name}}</view>
+            <view class="src-Collar-Roll">{{items.collar_Roll}}</view>
+            <text class="src-price">{{items.price}}</text>
+        </view>
+    </navigator>
+</view>
+
+
+<!-- 十款运行快速的高性能办公轻薄本  -->
+<view class="Heap-recommendation" wx:for="{{Office_Lightweight}}" >
+    <navigator >
+        <view class="Title-Picture-Background"> 
+            <image src="{{item.title_Picture_Background}}" />
+            <view class="Ten-products">{{item.ten_products}}</view>
+            <!-- 标题 -->
+            <text class="Title">{{item.title}}</text>
+        </view>
+        <view class="imageSrc-arce" wx:for="{{item.imageSrc}}" wx:for-item="items">
+            <image src="{{items.src}}" />
+            <view class="src-name">{{items.src_name}}</view>
+            <view class="src-Collar-Roll">{{items.collar_Roll}}</view>
+            <text class="src-price">{{items.price}}</text>
+        </view>
+    </navigator>
+</view>

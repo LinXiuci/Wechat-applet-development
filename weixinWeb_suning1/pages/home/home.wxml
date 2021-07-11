@@ -1,0 +1,268 @@
+
+<view class="home_table">
+    <searchInput></searchInput>
+    <scroll-view class="swiper-tab" scroll-x="{{true}}" bindscroll="currentTab" scroll-left="navScrollLeft">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">精选</view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">手机</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">服饰</view>
+        <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">极物</view>
+        <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">个人清洁</view>
+        <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">小家电</view>
+        <view class="swiper-tab-list {{currentTab==6 ? 'on' : ''}}" data-current="6" bindtap="swichNav">厨卫</view>
+        <view class="swiper-tab-list {{currentTab==7 ? 'on' : ''}}" data-current="7" bindtap="swichNav">苏宁健康</view>
+        <view class="swiper-tab-list {{currentTab==8 ? 'on' : ''}}" data-current="8" bindtap="swichNav">鞋靴</view>
+        <view class="swiper-tab-list {{currentTab==9 ? 'on' : ''}}" data-current="9" bindtap="swichNav">钟表眼镜</view>
+    </scroll-view>
+</view>
+
+ <block wx:if="{{currentTab == 0}}">
+        
+    <scroll-view scroll-y="{{false}}" >
+        
+        <!-- 轮播图片 -->
+        <view class="swiper-image-area">
+            <view >
+                <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+                    <navigator >
+                        <block wx:for="{{imgUrls}}"  wx:key="index">
+                            <swiper-item>
+                                <image  src="{{item}}" />
+                            </swiper-item>
+                        </block>
+                    </navigator>
+                </swiper>
+            </view>     
+        </view>
+
+        <view class="Advertising_space">
+            <!--  广告展示位  -->
+            <view class="Ad-placement" wx:for="{{AdPlacement.imageUrl}}" wx:key="index">
+                <navigator url="{{AdPlacement.navigatorSrc[index]}}">
+                    <image src="{{item}}" />
+                </navigator>
+            </view>
+
+            <!-- 三个小广告栏 -->
+            <view class="Three_small_advertising_columns" wx:for="{{ThreeSmallAdvertisingColumns.imageUrl}}"  wx:key="index"> 
+                <navigator url="{{AdPlacement.navigatorSrc[index]}}">
+                    <image src="{{item}}" />
+                </navigator>
+            </view>       
+        </view>
+
+        <!-- 多选项菜单 -->
+        <view class="Multiple_option_menu">
+            <swiper  indicator-dots="true" indicator-color="rgba(228,228,228,1)" indicator-active-color="#FECA49">
+                <block wx:for="{{MultipleOptionMenu}}" wx:key="item">
+                    <swiper-item>
+                        <block wx:for="{{item}}" wx:key="item">
+                            <view class="Multiple_option_menu_info">
+                                <navigator url="{{item.url}}" open-type="navigate" hover-class="other-navigator-hover">
+                                    <image src="{{item.src}}"></image>
+                                    <view class="Multiple_option_menu_text">{{item.name}}</view>
+                                </navigator>
+                            </view>
+                        </block>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+
+        <!--新人红包区域  -->
+        <view class="Newcomer_red_envelope_area">
+            <view class="Newcomer_red_envelope_area_padding">
+                <view class="Newcomer_red_envelope_area_icon" wx:for="{{NewcomerRedEnvelopeArea.imageSrc}}" wx:key="index">
+                    <navigator url="{{index.navigatorUrl[index]}}">
+                        <image src="{{item}}" />
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    
+        <!-- 优惠区域 -->
+        <view class="Preferential-area">
+            <!-- 限时秒杀 -->
+            <view class="Show-off" style="border-radius: 20rpx 0 0 0;">
+                <navigator wx:for="{{LimitedTimeSpike.imageSrc}}" wx:key="index" url="{{LimitedTimeSpike.navigatorUrl[index]}}" open-type="navigate" hover-class="other-navigator-hover">
+                    <view class="Title-area" >    
+                        <text >{{LimitedTimeSpike.title[index]}}</text>
+                        <view >{{LimitedTimeSpike.description[index]}}</view>
+                    </view>
+                    <view class="Image-area">
+                        <image src="{{item}}" />
+                        <view style="color:red;">{{LimitedTimeSpike.price[index]}}</view>
+                    </view>
+                </navigator>
+            </view>
+
+            <!-- 大聚惠-->
+            <view class="Show-off" style="border-radius:0 20rpx 0 0;">
+                <navigator wx:for="{{Dajuhui.imageSrc}}" wx:key="index" url="{{Dajuhui.navigatorUrl[index]}}" open-type="navigate" hover-class="other-navigator-hover">
+                    <view class="Title-area" >    
+                        <text >{{Dajuhui.title[index]}}</text>
+                        <view >{{Dajuhui.description[index]}}</view>
+                    </view>
+                    <view class="Image-area">
+                        <image src="{{item}}" />
+                        <view >{{Dajuhui.price[index]}}</view>
+                    </view> 
+                </navigator>
+            </view>
+            
+            <!--  /* 新品首发 */ -->
+            <view class="Show-off">
+                <navigator wx:for="{{newProductLaunch.imageSrc}}" wx:key="index" url="{{newProductLaunch.navigatorUrl[index]}}" open-type="navigate" hover-class="other-navigator-hover">        
+                    <view class="Title-area" >    
+                        <text >{{newProductLaunch.title[index]}}</text>
+                        <view >{{newProductLaunch.description[index]}}</view>
+                    </view>
+                    <view class="Image-area">
+                        <image src="{{item}}" />
+                        <view >{{newProductLaunch.price[index]}}</view>
+                    </view>
+                </navigator>
+            </view>
+            
+            <!--  /* 苏宁拼购  */ -->
+            <view class="Show-off">
+                <navigator wx:for="{{SuningBuying.imageSrc}}" wx:key="index" url="{{SuningBuying.navigatorUrl[index]}}" open-type="navigate" hover-class="other-navigator-hover">        
+                    <view class="Title-area" >    
+                        <text >{{SuningBuying.title[index]}}</text>
+                        <view >{{SuningBuying.description[index]}}</view>
+                    </view>
+                    <view class="Image-area">
+                        <image src="{{item}}" />
+                        <view >{{SuningBuying.price[index]}}</view>
+                    </view>
+                </navigator>
+            </view>        
+        </view>
+
+        <!-- 推荐区域 -->
+        <view class="Recommend-area">
+            <!--为您推荐  -->
+            <view class="Recommend-for-you">
+                <block wx:for="{{RecommendForYou}}" wx:key="item">
+                    <navigator url="{{item.navigatorUrl}}">
+                        <view >{{item.title}}</view>
+                        <text >{{item.text}}</text>
+                    </navigator>
+                </block>
+            </view>
+
+            <!-- 4个推荐位(苏宁国际、苏宁Outlets、会员抢购、Super会员) -->
+            <view class="four-recommended-places" wx:for="{{fourRecommendedPlace}}" wx:key="item">
+                <navigator url="{{item.navigatorUrl}}">
+                    <image src="{{item.imageSrc}}" />
+                    <view class="text-style">{{item.title}}</view>
+                </navigator>
+            </view>
+        </view>
+
+
+        <!-- 4个推荐位2(春节好酒、智能数码、极物特惠、手机通讯) -->
+        <view class="four-recommended-places-two">            
+            <view class="four-recommended-places-two-arce" wx:for="{{fourRecommendedPlace_two}}" wx:key="item">
+                <navigator url="{{item}}">
+                    <view class="Image-area">
+                        <image src="{{item.imageSrc}}" />
+                    </view>
+                    <view class="bg-Color" style="background-color:{{item.bgColor}} ;">
+                        <view class="bg-Color-title">{{item.title}}</view>
+                        <text >{{item.text}}</text>
+                        <view class="bg-Color-go" style="color:{{item.color}}">{{item.go}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        
+        <!-- 推荐榜单 -->    
+        <view class="Recommended-list" >
+
+            <!-- 推荐榜单标题 -->
+            <view class="Recommended-list-title" >
+                <image src="https://image1.suning.cn/uimg/cms/img/157793125530122894.png?from=mobile" />
+            </view>
+    
+            <block wx:for="{{RecommendedList}}">
+                <view class="Recommended-list-arce" >
+                    <block wx:for="{{item.content}}" wx:for-item="items">
+                        <navigator url="">
+                            <view class="Recommended-list-arce-bg-Color" style="background-color:{{items.borderColor}}">
+                                <view class="Image-area" style="background-color:{{items.bgColor}} ;">
+                                    <image src="{{items.src}}" />
+                                </view>
+ 
+                                <view class="border-color" style="background-color:{{items.borderColor}}">
+                                    <view class="border-color-title">{{items.title}}</view>
+                                    <text class="border-color-text">{{items.text}}</text>
+                                </view>                
+                            </view>
+                        </navigator>
+                    </block>
+                </view>
+            </block>
+             <!-- 人气榜 -->
+            <view class="Popularity-list">
+                <view class="list1"><view class="list1-text">人气榜</view></view>
+                <view class="list2"><view class="list2-text">人气榜</view></view>
+                <view class="list3"><view class="list3-text">人气榜</view></view>
+            </view>
+        </view>
+
+        <!-- 广告推荐5 -->
+        <view class="Ad-recommendation-5" wx:for="{{Ad_recommendation_5}}" wx:for-item="item">
+            <view class="bg-Color" wx:for="{{item.content}}" wx:for-item="items">
+                <navigator url="{{}}">
+                    <view class="bg-Color-title">{{items.title}}</view>
+                    <view class="popularity-list">{{items.popularity_list}}</view>
+                    <text class="bg-Color-text">{{items.text}}</text>
+
+                    <view class="Image-area">
+                        <image src="{{items.src}}" />
+                        <image src="{{items.src2}}" />
+                    </view>
+                </navigator>
+            </view>
+        </view>
+
+    </scroll-view>
+</block>
+
+    <!-- 第二个tab -->
+    <block wx:if="{{currentTab == 1}}">
+        <view>手机页面</view>
+    </block>
+
+    <!-- 第三个tab -->
+    <block wx:if="{{currentTab == 2}}">
+        <view>服饰页面</view>
+    </block>
+
+    <block wx:if="{{currentTab == 3}}">
+        <view>极物页面</view>
+    </block>
+
+    <block wx:if="{{currentTab == 4}}">
+        <view>个人清洁页面</view>
+    </block>
+
+    <block wx:if="{{currentTab == 5}}">
+        <view>小家电</view>
+    </block>
+
+    <block wx:if="{{currentTab == 6}}">
+        <view>厨卫</view>
+    </block>
+    <block wx:if="{{currentTab == 7}}">
+        <view>苏宁健康页面</view>
+    </block>
+
+    <block wx:if="{{currentTab == 8}}">
+        <view>鞋靴</view>
+    </block>
+
+    <block wx:if="{{currentTab == 9}}">
+        <view>钟表眼镜</view>
+    </block>        

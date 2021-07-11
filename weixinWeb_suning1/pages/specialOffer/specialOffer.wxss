@@ -1,0 +1,91 @@
+page{
+    background-color:#eff2f3;
+}
+
+.Heap-recommendation{
+    margin: 15rpx auto;
+    width: 95%;
+    height: 700rpx;
+    border-radius: 10rpx;
+    background-color: #ffffff;
+}
+.Title-Picture-Background{
+    margin: auto;
+    position: relative;
+    top: 10rpx;
+    width: 97%;
+    height: 350rpx;
+    border-radius: 10rpx;
+}
+.Title-Picture-Background image{
+    width: 100%;
+    height: 348rpx;
+    border-radius: 10rpx;
+}
+.Ten-products{
+    width: 100rpx;
+    font-size: 26rpx;
+    color: #ffffff;
+    font-weight: bold;
+
+    position: relative;
+    bottom: 350rpx;
+    left: 570rpx;
+    border-radius: 15rpx;
+    border: rgb(250, 248, 249) 1px solid;
+}
+
+.Title{
+    position: relative;
+    bottom:150rpx;
+    display: flex;
+    align-items: center;/* 垂直居中 */
+    justify-content: center;/* 水平居中 */
+    color:#fff;
+    font-family: PingFangSC-Medium;
+    font-weight: bold; 
+}
+
+.imageSrc-arce{
+    width: 220rpx;
+    height: 330rpx;
+    float: left;
+    margin-left: 15rpx;
+    margin-top: 20rpx;
+}
+
+.imageSrc-arce image{   
+    width: 220rpx;
+    height: 220rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.src-name{
+    width: 200rpx;
+    color: #5D6D7E;
+    font-size: 23rpx;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.src-Collar-Roll{
+    width: 150rpx;
+    font-size: 20rpx;
+    color: red;
+    text-align: center;
+    margin: 10rpx auto;
+/*     border-radius: 5rpx;
+    border:red 1px solid; */
+}
+
+.src-price{
+    display: flex;
+    align-items: center;/* 垂直居中 */
+    justify-content: center;/* 水平居中 */
+    font-size: 20rpx;
+    color: #808B96;
+}
